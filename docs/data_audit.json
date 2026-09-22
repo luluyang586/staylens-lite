@@ -1,0 +1,106 @@
+{
+  "source": {
+    "snapshot": "2026-06-16",
+    "index_url": "https://insideairbnb.com/get-the-data/",
+    "recorded_at": "2026-09-20T15:06:39.378326+00:00",
+    "license": "CC BY 4.0; verify upstream terms when redistributing",
+    "files": [
+      {
+        "file": "listings.csv.gz",
+        "url": "https://data.insideairbnb.com/australia/nsw/sydney/2026-06-16/data/listings.csv.gz",
+        "bytes": 12633389,
+        "sha256": "56c7b83723a195d6e4d0bf6d6ecd6da9b43b00cda9c9f6c08ffe11b7ee79597d"
+      },
+      {
+        "file": "calendar.csv.gz",
+        "url": "https://data.insideairbnb.com/australia/nsw/sydney/2026-06-16/data/calendar.csv.gz",
+        "bytes": 17897549,
+        "sha256": "7ce1b83795e82000f872886f187cac6a2b7f4b50a7bc829640689e8df0800b98"
+      },
+      {
+        "file": "reviews.csv.gz",
+        "url": "https://data.insideairbnb.com/australia/nsw/sydney/2026-06-16/data/reviews.csv.gz",
+        "bytes": 84860225,
+        "sha256": "cfd7ee701498d12186ba8425cf2be2dd34e92b9ae05cecfb32c0d340654d7798"
+      },
+      {
+        "file": "neighbourhoods.geojson",
+        "url": "https://data.insideairbnb.com/australia/nsw/sydney/2026-06-16/visualisations/neighbourhoods.geojson",
+        "bytes": 4268915,
+        "sha256": "e5103823d7664472f8b6ad9255ad8b45c93e06be5173114bda62448480d4aeb8"
+      }
+    ]
+  },
+  "raw_listings": 20573,
+  "missing_base_price": 2787,
+  "rating_scale": 5,
+  "clean_listings": 20573,
+  "actual_scrape_dates": [
+    "2026-06-17",
+    "2026-06-28",
+    "2026-06-29"
+  ],
+  "room_types": [
+    "Entire home/apt",
+    "Hotel room",
+    "Private room",
+    "Shared room"
+  ],
+  "neighbourhoods": [
+    "Ashfield",
+    "Auburn",
+    "Bankstown",
+    "Blacktown",
+    "Botany Bay",
+    "Burwood",
+    "Camden",
+    "Campbelltown",
+    "Canada Bay",
+    "Canterbury",
+    "City Of Kogarah",
+    "Fairfield",
+    "Holroyd",
+    "Hornsby",
+    "Hunters Hill",
+    "Hurstville",
+    "Ku-Ring-Gai",
+    "Lane Cove",
+    "Leichhardt",
+    "Liverpool",
+    "Manly",
+    "Marrickville",
+    "Mosman",
+    "North Sydney",
+    "Parramatta",
+    "Penrith",
+    "Pittwater",
+    "Randwick",
+    "Rockdale",
+    "Ryde",
+    "Strathfield",
+    "Sutherland Shire",
+    "Sydney",
+    "The Hills Shire",
+    "Warringah",
+    "Waverley",
+    "Willoughby",
+    "Woollahra"
+  ],
+  "raw_calendar_rows": 7509145,
+  "calendar_has_price_column": false,
+  "counts": {
+    "listings_clean": 20573,
+    "calendar_clean": 7509145,
+    "reviews_clean": 801398,
+    "poi": 10
+  },
+  "calendar_coverage": [
+    "2026-06-17",
+    "2027-06-28"
+  ],
+  "calendar_missing_prices": 7509145,
+  "review_date_range": [
+    "2009-12-05 00:00:00",
+    "2026-06-28 00:00:00"
+  ]
+}

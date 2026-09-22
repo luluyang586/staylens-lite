@@ -1,0 +1,10 @@
+{
+  "version": "review_reference_v1",
+  "status": "frozen_before_live_run",
+  "source": "Inside Airbnb Sydney 2026-06-16 real public snapshot",
+  "annotation_provenance": "Codex-assisted curated reference labels; not human-labelled",
+  "review_count": 55,
+  "tag_count": 138,
+  "dataset_sha256": "53c14c3185d307a6ab7dc970f8dc4357d6061f06e8c3e1141f24f88a0f5109c6",
+  "prompt_sha256_at_freeze": "af18e40aae213da813c0d133310ee874635000bd269e159385360c14953ddb7c"
+}

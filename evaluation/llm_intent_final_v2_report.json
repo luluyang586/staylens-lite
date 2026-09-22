@@ -1,0 +1,3374 @@
+{
+  "generated_at": "2026-09-21T12:05:38.225466+00:00",
+  "suite": "intent_final_v2",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "prompt_sha256": "4b1f2f96adc616f4eb5c6cf43751a5160631b2a7cfed6a37455fc6f04e804909",
+  "dataset_sha256": "01f36627ac5ecc305b50da8c8ceb8abec574094ba4e6528b0909fc0eabe9d7f6",
+  "api_usage": {
+    "calls": 101,
+    "input_tokens": 157489,
+    "output_tokens": 15969,
+    "total_tokens": 173458,
+    "usage_available_for_all_calls": true
+  },
+  "results": {
+    "case_exact": 0.95,
+    "field_accuracy": 0.9715909090909091,
+    "n": 100,
+    "target_field_count": 352,
+    "slice_metrics": {
+      "bilingual_colloquial": {
+        "n": 10,
+        "case_exact": 1.0,
+        "field_accuracy": 1.0
+      },
+      "budget_semantics": {
+        "n": 15,
+        "case_exact": 1.0,
+        "field_accuracy": 1.0
+      },
+      "complete_core": {
+        "n": 20,
+        "case_exact": 0.95,
+        "field_accuracy": 0.990909090909091
+      },
+      "date_and_duration": {
+        "n": 10,
+        "case_exact": 0.8,
+        "field_accuracy": 0.9130434782608695
+      },
+      "instruction_robustness": {
+        "n": 5,
+        "case_exact": 1.0,
+        "field_accuracy": 1.0
+      },
+      "location_entities": {
+        "n": 15,
+        "case_exact": 1.0,
+        "field_accuracy": 1.0
+      },
+      "missing_or_ambiguous": {
+        "n": 15,
+        "case_exact": 0.8666666666666667,
+        "field_accuracy": 0.8970588235294118
+      },
+      "preferences": {
+        "n": 10,
+        "case_exact": 1.0,
+        "field_accuracy": 1.0
+      }
+    },
+    "cases": [
+      {
+        "id": "c01",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 220.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c02",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 6,
+          "budget_amount": 1800.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c03",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true,
+          "room_type_preference": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 140.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": "Private room",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "nights",
+            "guests",
+            "budget",
+            "room_type"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c04",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true,
+          "room_type_preference": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 360.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 4,
+          "room_type_preference": "Entire home/apt",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "room_type"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c05",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true,
+          "room_type_preference": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 1,
+          "budget_amount": 300.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": "Hotel room",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "room_type"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c06",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true,
+          "room_type_preference": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 500.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 6,
+          "room_type_preference": "Entire home/apt",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "room_type"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c07",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true,
+          "room_type_preference": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 7,
+          "budget_amount": 700.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": "Shared room",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "room_type"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c08",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 8,
+          "budget_amount": 450.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 5,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c09",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 10,
+          "budget_amount": 1200.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c10",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 280.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 4,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c11",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 190.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c12",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true,
+          "room_type_preference": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 9,
+          "budget_amount": 2700.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": "Entire home/apt",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "room_type"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c13",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true,
+          "room_type_preference": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 1,
+          "budget_amount": 95.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": "Private room",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c14",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 650.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 7,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c15",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 12,
+          "budget_amount": 2400.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c16",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true,
+          "room_type_preference": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 6,
+          "budget_amount": 260.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": "Hotel room",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "room_type"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c17",
+        "category": "complete_core",
+        "all_expected_fields": false,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": false,
+          "budget_type": true,
+          "needs_clarification": true,
+          "room_type_preference": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 400.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 4,
+          "room_type_preference": "Entire home/apt",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "room_type"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c18",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true,
+          "room_type_preference": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 110.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": "Shared room",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c19",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 7,
+          "budget_amount": 900.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 8,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "c20",
+        "category": "complete_core",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 14,
+          "budget_amount": 4200.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m01",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": null,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": "Entire home/apt",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "budget_amount"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充预算。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m02",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": null,
+          "budget_amount": 200.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "nights"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充入住晚数（天数不等于晚数）。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m03",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 180.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": null,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "guests"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充入住人数。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m04",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": null,
+          "budget_amount": 240.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "guests"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "nights"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充入住晚数（天数不等于晚数）。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m05",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "soft_preferences": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": null,
+          "budget_amount": null,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": null,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [
+            "quiet"
+          ],
+          "missing_required_fields": [
+            "guests",
+            "nights",
+            "budget_amount"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充入住人数、入住晚数（天数不等于晚数）、预算。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m06",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": null,
+          "budget_amount": 900.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "nights"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充入住晚数（天数不等于晚数）。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m07",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 600.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": null,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "guests"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充入住人数。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m08",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": null,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "budget_amount"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充预算。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m09",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": null,
+          "budget_amount": 200.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": null,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "guests",
+            "nights"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充入住人数、入住晚数（天数不等于晚数）。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m10",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": null,
+          "budget_amount": null,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "nights",
+            "budget_amount"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充入住晚数（天数不等于晚数）、预算。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m11",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": false,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "currency": false,
+          "needs_clarification": false
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 200.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m12",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "currency": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 1000.0,
+          "budget_type": "total",
+          "currency": "GBP",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "currency"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充以AUD表示的预算。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m13",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "max_distance_km": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 220.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": 2.0,
+          "hard_preferences": [
+            "nights",
+            "guests",
+            "budget",
+            "location",
+            "distance"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "target_pois"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充距离限制对应的地点。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "m14",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": false,
+        "field_matches": {
+          "guests": false,
+          "nights": false,
+          "budget_amount": false,
+          "check_in_date": false,
+          "needs_clarification": false
+        },
+        "actual": null,
+        "status": "ValueError: 需求解析两次均失败；请用下方结构化表单。"
+      },
+      {
+        "id": "m15",
+        "category": "missing_or_ambiguous",
+        "all_expected_fields": true,
+        "field_matches": {
+          "nights": true,
+          "budget_amount": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": null,
+          "budget_amount": 1500.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": null,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "guests",
+            "nights"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充入住人数、入住晚数（天数不等于晚数）。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b01",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 250.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "guests",
+            "nights",
+            "budget"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b02",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 750.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b03",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 180.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "nights",
+            "guests",
+            "budget"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b04",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 1000.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b05",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 900.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 4,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b06",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 450.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 4,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b07",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 6,
+          "budget_amount": 300.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "nights",
+            "guests",
+            "budget"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b08",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 7,
+          "budget_amount": 2100.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b09",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 200.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b10",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 800.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": "Entire home/apt",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b11",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 1,
+          "budget_amount": 99.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b12",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 1,
+          "budget_amount": 99.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b13",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 5000.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 6,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b14",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 1000.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 6,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "b15",
+        "category": "budget_semantics",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 10,
+          "budget_amount": 150.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "d01",
+        "category": "date_and_duration",
+        "all_expected_fields": true,
+        "field_matches": {
+          "check_in_date": true,
+          "nights": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "date_specific",
+          "check_in_date": "2026-11-03",
+          "nights": 4,
+          "budget_amount": 240.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "d02",
+        "category": "date_and_duration",
+        "all_expected_fields": true,
+        "field_matches": {
+          "check_in_date": true,
+          "nights": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "date_specific",
+          "check_in_date": "2026-12-10",
+          "nights": 5,
+          "budget_amount": 300.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "d03",
+        "category": "date_and_duration",
+        "all_expected_fields": true,
+        "field_matches": {
+          "check_in_date": true,
+          "nights": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "date_specific",
+          "check_in_date": "2027-01-02",
+          "nights": 2,
+          "budget_amount": 400.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "d04",
+        "category": "date_and_duration",
+        "all_expected_fields": false,
+        "field_matches": {
+          "check_in_date": false,
+          "nights": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "date_specific",
+          "check_in_date": "2024-02-14",
+          "nights": 3,
+          "budget_amount": 260.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "d05",
+        "category": "date_and_duration",
+        "all_expected_fields": false,
+        "field_matches": {
+          "check_in_date": false,
+          "nights": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "date_specific",
+          "check_in_date": "2023-11-20",
+          "nights": 4,
+          "budget_amount": 350.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 4,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "d06",
+        "category": "date_and_duration",
+        "all_expected_fields": true,
+        "field_matches": {
+          "check_in_date": true,
+          "nights": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "date_specific",
+          "check_in_date": "2026-10-15",
+          "nights": 7,
+          "budget_amount": 1400.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "d07",
+        "category": "date_and_duration",
+        "all_expected_fields": true,
+        "field_matches": {
+          "check_in_date": true,
+          "nights": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "date_specific",
+          "check_in_date": "2026-12-01",
+          "nights": 5,
+          "budget_amount": 1500.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "d08",
+        "category": "date_and_duration",
+        "all_expected_fields": true,
+        "field_matches": {
+          "check_in_date": true,
+          "nights": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "date_specific",
+          "check_in_date": "2027-01-05",
+          "nights": 3,
+          "budget_amount": 170.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "d09",
+        "category": "date_and_duration",
+        "all_expected_fields": true,
+        "field_matches": {
+          "check_in_date": true,
+          "nights": true,
+          "guests": true,
+          "budget_amount": true,
+          "needs_clarification": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": null,
+          "budget_amount": 200.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [
+            "nights"
+          ],
+          "needs_clarification": true,
+          "clarification_question": "请补充入住晚数（天数不等于晚数）。"
+        },
+        "status": "ok"
+      },
+      {
+        "id": "d10",
+        "category": "date_and_duration",
+        "all_expected_fields": true,
+        "field_matches": {
+          "check_in_date": true,
+          "nights": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "date_specific",
+          "check_in_date": "2027-03-01",
+          "nights": 1,
+          "budget_amount": 230.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": "Entire home/apt",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l01",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "target_pois": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 250.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "Sydney Opera House"
+          ],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "location"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l02",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "target_pois": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 280.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "Central Station"
+          ],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l03",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "target_pois": true,
+          "max_distance_km": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 400.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 4,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "Sydney Airport"
+          ],
+          "max_distance_km": 8.0,
+          "hard_preferences": [
+            "nights",
+            "guests",
+            "budget",
+            "location"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l04",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "preferred_neighbourhoods": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 600.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [
+            "Sydney"
+          ],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "location"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l05",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "preferred_neighbourhoods": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 6,
+          "budget_amount": 240.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [
+            "Waverley",
+            "Randwick"
+          ],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l06",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "target_pois": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 300.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "UNSW"
+          ],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "guests",
+            "nights",
+            "budget"
+          ],
+          "soft_preferences": [
+            "near_transit"
+          ],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l07",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "preferred_neighbourhoods": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 7,
+          "budget_amount": 1750.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [
+            "Parramatta"
+          ],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "location"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l08",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "target_pois": true,
+          "max_distance_km": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 320.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "Circular Quay"
+          ],
+          "max_distance_km": 3.0,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l09",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "target_pois": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 180.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "University of Sydney"
+          ],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l10",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "target_pois": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 500.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 4,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "Darling Harbour"
+          ],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l11",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "preferred_neighbourhoods": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 1200.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [
+            "North Sydney"
+          ],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "location"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l12",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "target_pois": true,
+          "max_distance_km": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 210.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "Bondi Junction"
+          ],
+          "max_distance_km": 5.0,
+          "hard_preferences": [
+            "guests",
+            "nights",
+            "budget",
+            "location"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l13",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "preferred_neighbourhoods": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 350.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [
+            "Manly"
+          ],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l14",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "preferred_neighbourhoods": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 8,
+          "budget_amount": 2000.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [
+            "Woollahra",
+            "Mosman"
+          ],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "neighbourhood"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "l15",
+        "category": "location_entities",
+        "all_expected_fields": true,
+        "field_matches": {
+          "target_pois": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 190.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "Town Hall"
+          ],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "p01",
+        "category": "preferences",
+        "all_expected_fields": true,
+        "field_matches": {
+          "soft_preferences": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 220.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "guests",
+            "nights",
+            "budget"
+          ],
+          "soft_preferences": [
+            "quiet"
+          ],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "p02",
+        "category": "preferences",
+        "all_expected_fields": true,
+        "field_matches": {
+          "soft_preferences": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 220.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [
+            "clean"
+          ],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "p03",
+        "category": "preferences",
+        "all_expected_fields": true,
+        "field_matches": {
+          "soft_preferences": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 220.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [
+            "safe"
+          ],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "p04",
+        "category": "preferences",
+        "all_expected_fields": true,
+        "field_matches": {
+          "soft_preferences": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 220.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "near public transport"
+          ],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [
+            "near_transit"
+          ],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "p05",
+        "category": "preferences",
+        "all_expected_fields": true,
+        "field_matches": {
+          "soft_preferences": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 1500.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [
+            "clean",
+            "quiet"
+          ],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "p06",
+        "category": "preferences",
+        "all_expected_fields": true,
+        "field_matches": {
+          "soft_preferences": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 160.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "near_transit"
+          ],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "guests",
+            "nights",
+            "budget"
+          ],
+          "soft_preferences": [
+            "safe",
+            "near_transit"
+          ],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "p07",
+        "category": "preferences",
+        "all_expected_fields": true,
+        "field_matches": {
+          "room_type_preference": true,
+          "soft_preferences": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 6,
+          "budget_amount": 280.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": "Entire home/apt",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "room_type"
+          ],
+          "soft_preferences": [
+            "clean"
+          ],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "p08",
+        "category": "preferences",
+        "all_expected_fields": true,
+        "field_matches": {
+          "room_type_preference": true,
+          "soft_preferences": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 200.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": "Private room",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "room_type"
+          ],
+          "soft_preferences": [
+            "quiet"
+          ],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "p09",
+        "category": "preferences",
+        "all_expected_fields": true,
+        "field_matches": {
+          "soft_preferences": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 360.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 4,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "near_transit"
+          ],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [
+            "safe",
+            "clean",
+            "near_transit"
+          ],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "p10",
+        "category": "preferences",
+        "all_expected_fields": true,
+        "field_matches": {
+          "room_type_preference": true,
+          "soft_preferences": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 8,
+          "budget_amount": 1200.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": "Hotel room",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights",
+            "room_type"
+          ],
+          "soft_preferences": [
+            "quiet"
+          ],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "x01",
+        "category": "bilingual_colloquial",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 250.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "x02",
+        "category": "bilingual_colloquial",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 1200.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "x03",
+        "category": "bilingual_colloquial",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 6,
+          "budget_amount": 230.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "x04",
+        "category": "bilingual_colloquial",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 1000.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "x05",
+        "category": "bilingual_colloquial",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true,
+          "room_type_preference": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 400.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 4,
+          "room_type_preference": "Entire home/apt",
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "x06",
+        "category": "bilingual_colloquial",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 300.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "x07",
+        "category": "bilingual_colloquial",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 7,
+          "budget_amount": 300.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "x08",
+        "category": "bilingual_colloquial",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 1250.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "x09",
+        "category": "bilingual_colloquial",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 600.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 6,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "guests",
+            "nights",
+            "budget"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "x10",
+        "category": "bilingual_colloquial",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 280.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "r01",
+        "category": "instruction_robustness",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 3,
+          "budget_amount": 200.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [
+            "budget",
+            "guests",
+            "nights"
+          ],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "r02",
+        "category": "instruction_robustness",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 240.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "r03",
+        "category": "instruction_robustness",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "budget_type": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 2,
+          "budget_amount": 300.0,
+          "budget_type": "total",
+          "currency": "AUD",
+          "guests": 1,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "r04",
+        "category": "instruction_robustness",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "preferred_neighbourhoods": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 5,
+          "budget_amount": 260.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 3,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      },
+      {
+        "id": "r05",
+        "category": "instruction_robustness",
+        "all_expected_fields": true,
+        "field_matches": {
+          "guests": true,
+          "nights": true,
+          "budget_amount": true,
+          "target_pois": true
+        },
+        "actual": {
+          "intent_type": "listing_recommendation",
+          "search_mode": "exploration",
+          "check_in_date": null,
+          "nights": 4,
+          "budget_amount": 300.0,
+          "budget_type": "per_night",
+          "currency": "AUD",
+          "guests": 2,
+          "room_type_preference": null,
+          "preferred_neighbourhoods": [],
+          "target_pois": [
+            "Sydney CBD"
+          ],
+          "max_distance_km": null,
+          "hard_preferences": [],
+          "soft_preferences": [],
+          "missing_required_fields": [],
+          "needs_clarification": false,
+          "clarification_question": null
+        },
+        "status": "ok"
+      }
+    ]
+  }
+}

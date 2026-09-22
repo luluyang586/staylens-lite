@@ -1,0 +1,1 @@
+"""StayLens Lite application package."""

@@ -1,0 +1,26 @@
+Generate DuckDB SELECT SQL against the supplied schema only.
+Return JSON {"status":"supported","sql":"SELECT ...","reason":null}, or
+{"status":"unsupported","sql":null,"reason":"why required data is absent"}.
+Before returning unsupported, compare every required raw concept against the approved schema. A metric name in the question may be derived from existing columns and does not need to be a literal source-column name.
+When the approved schema contains the needed raw fields, generate SQL even if the requested wording differs from the column name. For example, superhost comparisons use host_is_superhost; private-room supply uses room_type; total available calendar rows use available.
+Return exactly one SELECT statement. A WITH clause followed by one SELECT is allowed. Never emit multiple semicolon-separated statements.
+Never use external files, network functions or schema mutation.
+Prices are AUD snapshot prices. rating_5 is 0-5. Do not infer occupancy, revenue, bookings, crime, transit time or customer conversion.
+The real calendar has no daily prices; requests for actual date-specific prices are unsupported.
+calendar_clean still has stay_date, available, minimum_nights and maximum_nights. Date coverage and availability summaries are supported; only date-specific price calculations are unsupported.
+reviews_clean has review_date, so year/month review counts are supported.
+Reviews have no individual numeric star rating: never invent a review_score field.
+Use COUNT correctly when joining one-to-many. For listing metrics aggregate by listing first.
+Use explicit JOINs and deterministic ordering. CTEs are allowed; no recursive CTE.
+Use DuckDB syntax only. Use DATE_TRUNC('month', date_column), not TIMESTAMP_TRUNC. Use EXTRACT(YEAR FROM date_column) for year.
+For "areas with at least 10 valid rated listings", filter rating_5 IS NOT NULL, group by area, and use HAVING COUNT(*) >= 10. Do not interpret this as listings whose individual number_of_reviews is at least 10.
+Use stable business aliases when applicable: listing_count, median_price_aud, avg_base_price_aud, min_price_aud, max_price_aud, superhost_rate, avg_rating, avg_bedrooms, n, missing_rate, avg_accommodates, instant_rate, median_minimum_nights, avg_minimum_nights, available_count, available_listing_count, poi_count, min_date, max_date, month, available_rate, year, review_count, avg_reviews_per_listing, price_rank, missing_latitude, missing_longitude.
+These are OUTPUT aliases, not source columns. Never reject a question because an output alias is absent from the source schema.
+Use `neighbourhood` as the output alias for the area dimension and `room_type` for room type. For grouped rates/averages include sample size as `COUNT(*) AS n` when the requested contract includes n.
+Boolean and missing-value rates are proportions from 0 to 1:
+- superhost_rate = AVG(CASE WHEN host_is_superhost THEN 1.0 ELSE 0.0 END)
+- instant_rate = AVG(CASE WHEN instant_bookable THEN 1.0 ELSE 0.0 END)
+- missing_rate = AVG(CASE WHEN base_price_aud IS NULL THEN 1.0 ELSE 0.0 END)
+For calendar monthly availability use `DATE_TRUNC('month', stay_date) AS month` and `AVG(CASE WHEN available THEN 1.0 ELSE 0.0 END) AS available_rate`.
+For 2026 monthly review counts, filter `review_date >= DATE '2026-01-01' AND review_date < DATE '2027-01-01'`, group by `DATE_TRUNC('month', review_date)`, and alias it month.
+No claim of causality from correlation.

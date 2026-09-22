@@ -1,0 +1,528 @@
+[
+  {
+    "id": "s01",
+    "category": "listing_aggregate",
+    "question": "每个区域有多少房源",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "listing_count"
+    ],
+    "reference_sql": "SELECT neighbourhood, COUNT(*) AS listing_count FROM listings_clean GROUP BY neighbourhood"
+  },
+  {
+    "id": "s02",
+    "category": "listing_aggregate",
+    "question": "按房型统计房源数和基础价中位数",
+    "status": "supported",
+    "expected_columns": [
+      "room_type",
+      "listing_count",
+      "median_price_aud"
+    ],
+    "reference_sql": "SELECT room_type, COUNT(*) AS listing_count, MEDIAN(base_price_aud) AS median_price_aud FROM listings_clean GROUP BY room_type"
+  },
+  {
+    "id": "s03",
+    "category": "listing_aggregate",
+    "question": "各区域平均可住人数及样本量",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "avg_accommodates",
+      "n"
+    ],
+    "reference_sql": "SELECT neighbourhood, AVG(accommodates) AS avg_accommodates, COUNT(*) AS n FROM listings_clean GROUP BY neighbourhood"
+  },
+  {
+    "id": "s04",
+    "category": "listing_aggregate",
+    "question": "各区域卧室数平均值",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "avg_bedrooms"
+    ],
+    "reference_sql": "SELECT neighbourhood, AVG(bedrooms) AS avg_bedrooms FROM listings_clean GROUP BY neighbourhood"
+  },
+  {
+    "id": "s05",
+    "category": "listing_aggregate",
+    "question": "不同房型的基础价平均值",
+    "status": "supported",
+    "expected_columns": [
+      "room_type",
+      "avg_base_price_aud"
+    ],
+    "reference_sql": "SELECT room_type, AVG(base_price_aud) AS avg_base_price_aud FROM listings_clean GROUP BY room_type"
+  },
+  {
+    "id": "s06",
+    "category": "listing_aggregate",
+    "question": "各区域基础价最低值和最高值",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "min_price_aud",
+      "max_price_aud"
+    ],
+    "reference_sql": "SELECT neighbourhood, MIN(base_price_aud) AS min_price_aud, MAX(base_price_aud) AS max_price_aud FROM listings_clean GROUP BY neighbourhood"
+  },
+  {
+    "id": "s07",
+    "category": "listing_aggregate",
+    "question": "各区域超赞房东比例和样本量",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "superhost_rate",
+      "n"
+    ],
+    "reference_sql": "SELECT neighbourhood, AVG(CASE WHEN host_is_superhost THEN 1.0 ELSE 0.0 END) AS superhost_rate, COUNT(*) AS n FROM listings_clean GROUP BY neighbourhood"
+  },
+  {
+    "id": "s08",
+    "category": "listing_aggregate",
+    "question": "按房型比较即时预订比例",
+    "status": "supported",
+    "expected_columns": [
+      "room_type",
+      "instant_rate",
+      "n"
+    ],
+    "reference_sql": "SELECT room_type, AVG(CASE WHEN instant_bookable THEN 1.0 ELSE 0.0 END) AS instant_rate, COUNT(*) AS n FROM listings_clean GROUP BY room_type"
+  },
+  {
+    "id": "s09",
+    "category": "listing_aggregate",
+    "question": "各区域基础价缺失率",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "missing_rate",
+      "n"
+    ],
+    "reference_sql": "SELECT neighbourhood, AVG(CASE WHEN base_price_aud IS NULL THEN 1.0 ELSE 0.0 END) AS missing_rate, COUNT(*) AS n FROM listings_clean GROUP BY neighbourhood"
+  },
+  {
+    "id": "s10",
+    "category": "listing_aggregate",
+    "question": "至少有10个有效评分房源的区域平均评分排名",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "avg_rating",
+      "n"
+    ],
+    "reference_sql": "SELECT neighbourhood, AVG(rating_5) AS avg_rating, COUNT(*) AS n FROM listings_clean WHERE rating_5 IS NOT NULL GROUP BY neighbourhood HAVING COUNT(*) >= 10 ORDER BY avg_rating DESC"
+  },
+  {
+    "id": "s11",
+    "category": "listing_filter",
+    "question": "每个区域基础价不超过120澳币的房源数",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "listing_count"
+    ],
+    "reference_sql": "SELECT neighbourhood, COUNT(*) AS listing_count FROM listings_clean WHERE base_price_aud <= 120 GROUP BY neighbourhood"
+  },
+  {
+    "id": "s12",
+    "category": "listing_filter",
+    "question": "每个区域私人房间的供应量",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "listing_count"
+    ],
+    "reference_sql": "SELECT neighbourhood, COUNT(*) AS listing_count FROM listings_clean WHERE room_type = 'Private room' GROUP BY neighbourhood"
+  },
+  {
+    "id": "s13",
+    "category": "listing_filter",
+    "question": "不同区域酒店房型的房源数量",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "listing_count"
+    ],
+    "reference_sql": "SELECT neighbourhood, COUNT(*) AS listing_count FROM listings_clean WHERE room_type = 'Hotel room' GROUP BY neighbourhood"
+  },
+  {
+    "id": "s14",
+    "category": "listing_filter",
+    "question": "可容纳至少6人的房源按区域计数",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "listing_count"
+    ],
+    "reference_sql": "SELECT neighbourhood, COUNT(*) AS listing_count FROM listings_clean WHERE accommodates >= 6 GROUP BY neighbourhood"
+  },
+  {
+    "id": "s15",
+    "category": "listing_filter",
+    "question": "没有评论的房源按房型计数",
+    "status": "supported",
+    "expected_columns": [
+      "room_type",
+      "listing_count"
+    ],
+    "reference_sql": "SELECT room_type, COUNT(*) AS listing_count FROM listings_clean WHERE number_of_reviews = 0 GROUP BY room_type"
+  },
+  {
+    "id": "s16",
+    "category": "listing_filter",
+    "question": "评分不低于4.8的房源按区域统计",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "listing_count"
+    ],
+    "reference_sql": "SELECT neighbourhood, COUNT(*) AS listing_count FROM listings_clean WHERE rating_5 >= 4.8 GROUP BY neighbourhood"
+  },
+  {
+    "id": "s17",
+    "category": "listing_comparison",
+    "question": "比较超赞房东和普通房东的平均评分",
+    "status": "supported",
+    "expected_columns": [
+      "host_is_superhost",
+      "avg_rating",
+      "n"
+    ],
+    "reference_sql": "SELECT host_is_superhost, AVG(rating_5) AS avg_rating, COUNT(*) AS n FROM listings_clean WHERE rating_5 IS NOT NULL GROUP BY host_is_superhost"
+  },
+  {
+    "id": "s18",
+    "category": "listing_comparison",
+    "question": "比较可即时预订与不可即时预订房源的平均基础价",
+    "status": "supported",
+    "expected_columns": [
+      "instant_bookable",
+      "avg_base_price_aud",
+      "n"
+    ],
+    "reference_sql": "SELECT instant_bookable, AVG(base_price_aud) AS avg_base_price_aud, COUNT(*) AS n FROM listings_clean GROUP BY instant_bookable"
+  },
+  {
+    "id": "s19",
+    "category": "listing_comparison",
+    "question": "按可住人数统计房源数和基础价中位数",
+    "status": "supported",
+    "expected_columns": [
+      "accommodates",
+      "listing_count",
+      "median_price_aud"
+    ],
+    "reference_sql": "SELECT accommodates, COUNT(*) AS listing_count, MEDIAN(base_price_aud) AS median_price_aud FROM listings_clean GROUP BY accommodates"
+  },
+  {
+    "id": "s20",
+    "category": "listing_comparison",
+    "question": "各区域最短入住晚数中位数",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "median_minimum_nights"
+    ],
+    "reference_sql": "SELECT neighbourhood, MEDIAN(minimum_nights) AS median_minimum_nights FROM listings_clean GROUP BY neighbourhood"
+  },
+  {
+    "id": "s21",
+    "category": "ranking",
+    "question": "基础价最高的10套房源",
+    "status": "supported",
+    "expected_columns": [
+      "listing_id",
+      "listing_name",
+      "base_price_aud"
+    ],
+    "reference_sql": "SELECT listing_id, listing_name, base_price_aud FROM listings_clean WHERE base_price_aud IS NOT NULL ORDER BY base_price_aud DESC, listing_id LIMIT 10"
+  },
+  {
+    "id": "s22",
+    "category": "ranking",
+    "question": "找出每个区域基础价最高的1套房源并保留区域内价格排名",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "listing_id",
+      "base_price_aud",
+      "price_rank"
+    ],
+    "reference_sql": "WITH ranked AS (SELECT neighbourhood, listing_id, base_price_aud, ROW_NUMBER() OVER (PARTITION BY neighbourhood ORDER BY base_price_aud DESC, listing_id) AS price_rank FROM listings_clean WHERE base_price_aud IS NOT NULL) SELECT neighbourhood, listing_id, base_price_aud, price_rank FROM ranked WHERE price_rank = 1"
+  },
+  {
+    "id": "s23",
+    "category": "ranking",
+    "question": "评论数量最多的20个房源",
+    "status": "supported",
+    "expected_columns": [
+      "listing_id",
+      "number_of_reviews"
+    ],
+    "reference_sql": "SELECT listing_id, number_of_reviews FROM listings_clean ORDER BY number_of_reviews DESC, listing_id LIMIT 20"
+  },
+  {
+    "id": "s24",
+    "category": "ranking",
+    "question": "平均评分最高的10个区域，要求每区至少20个有效评分房源",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "avg_rating",
+      "n"
+    ],
+    "reference_sql": "SELECT neighbourhood, AVG(rating_5) AS avg_rating, COUNT(*) AS n FROM listings_clean WHERE rating_5 IS NOT NULL GROUP BY neighbourhood HAVING COUNT(*) >= 20 ORDER BY avg_rating DESC LIMIT 10"
+  },
+  {
+    "id": "s25",
+    "category": "calendar",
+    "question": "日历数据覆盖的最早和最晚日期",
+    "status": "supported",
+    "expected_columns": [
+      "min_date",
+      "max_date"
+    ],
+    "reference_sql": "SELECT MIN(stay_date) AS min_date, MAX(stay_date) AS max_date FROM calendar_clean"
+  },
+  {
+    "id": "s26",
+    "category": "calendar",
+    "question": "按月份计算可用日历记录占比",
+    "status": "supported",
+    "expected_columns": [
+      "month",
+      "available_rate"
+    ],
+    "reference_sql": "SELECT DATE_TRUNC('month', stay_date) AS month, AVG(CASE WHEN available THEN 1.0 ELSE 0.0 END) AS available_rate FROM calendar_clean GROUP BY DATE_TRUNC('month', stay_date)"
+  },
+  {
+    "id": "s27",
+    "category": "calendar",
+    "question": "所有可预订日历记录的总数",
+    "status": "supported",
+    "expected_columns": [
+      "available_count"
+    ],
+    "reference_sql": "SELECT COUNT(*) AS available_count FROM calendar_clean WHERE available"
+  },
+  {
+    "id": "s28",
+    "category": "calendar",
+    "question": "2026年12月每天可预订的房源数",
+    "status": "supported",
+    "expected_columns": [
+      "stay_date",
+      "available_listing_count"
+    ],
+    "reference_sql": "SELECT stay_date, COUNT(DISTINCT listing_id) AS available_listing_count FROM calendar_clean WHERE available AND stay_date >= DATE '2026-12-01' AND stay_date < DATE '2027-01-01' GROUP BY stay_date"
+  },
+  {
+    "id": "s29",
+    "category": "calendar",
+    "question": "各月日历最短入住晚数的平均值",
+    "status": "supported",
+    "expected_columns": [
+      "month",
+      "avg_minimum_nights"
+    ],
+    "reference_sql": "SELECT DATE_TRUNC('month', stay_date) AS month, AVG(minimum_nights) AS avg_minimum_nights FROM calendar_clean GROUP BY DATE_TRUNC('month', stay_date)"
+  },
+  {
+    "id": "s30",
+    "category": "calendar",
+    "question": "2027年1月1日可用的房源数量",
+    "status": "supported",
+    "expected_columns": [
+      "available_listing_count"
+    ],
+    "reference_sql": "SELECT COUNT(DISTINCT listing_id) AS available_listing_count FROM calendar_clean WHERE available AND stay_date = DATE '2027-01-01'"
+  },
+  {
+    "id": "s31",
+    "category": "reviews",
+    "question": "评论数据的最早日期和最晚日期",
+    "status": "supported",
+    "expected_columns": [
+      "min_date",
+      "max_date"
+    ],
+    "reference_sql": "SELECT MIN(review_date) AS min_date, MAX(review_date) AS max_date FROM reviews_clean"
+  },
+  {
+    "id": "s32",
+    "category": "reviews",
+    "question": "统计2026年每个月的评论数量",
+    "status": "supported",
+    "expected_columns": [
+      "month",
+      "review_count"
+    ],
+    "reference_sql": "SELECT DATE_TRUNC('month', review_date) AS month, COUNT(*) AS review_count FROM reviews_clean WHERE review_date >= DATE '2026-01-01' AND review_date < DATE '2027-01-01' GROUP BY DATE_TRUNC('month', review_date)"
+  },
+  {
+    "id": "s33",
+    "category": "reviews",
+    "question": "评论记录最多的10个房源",
+    "status": "supported",
+    "expected_columns": [
+      "listing_id",
+      "review_count"
+    ],
+    "reference_sql": "SELECT listing_id, COUNT(*) AS review_count FROM reviews_clean GROUP BY listing_id ORDER BY review_count DESC, listing_id LIMIT 10"
+  },
+  {
+    "id": "s34",
+    "category": "join",
+    "question": "按区域统计评论总数",
+    "status": "supported",
+    "expected_columns": [
+      "neighbourhood",
+      "review_count"
+    ],
+    "reference_sql": "SELECT l.neighbourhood, COUNT(r.review_id) AS review_count FROM listings_clean l LEFT JOIN reviews_clean r ON l.listing_id = r.listing_id GROUP BY l.neighbourhood"
+  },
+  {
+    "id": "s35",
+    "category": "join",
+    "question": "按房型统计每套房源的平均评论记录数",
+    "status": "supported",
+    "expected_columns": [
+      "room_type",
+      "avg_reviews_per_listing"
+    ],
+    "reference_sql": "WITH review_counts AS (SELECT listing_id, COUNT(*) AS review_count FROM reviews_clean GROUP BY listing_id) SELECT l.room_type, AVG(COALESCE(r.review_count, 0)) AS avg_reviews_per_listing FROM listings_clean l LEFT JOIN review_counts r ON l.listing_id = r.listing_id GROUP BY l.room_type"
+  },
+  {
+    "id": "s36",
+    "category": "poi",
+    "question": "不同POI类型各有多少地点",
+    "status": "supported",
+    "expected_columns": [
+      "poi_type",
+      "poi_count"
+    ],
+    "reference_sql": "SELECT poi_type, COUNT(*) AS poi_count FROM poi GROUP BY poi_type"
+  },
+  {
+    "id": "s37",
+    "category": "poi",
+    "question": "列出全部POI名称及类型",
+    "status": "supported",
+    "expected_columns": [
+      "poi_name",
+      "poi_type"
+    ],
+    "reference_sql": "SELECT poi_name, poi_type FROM poi"
+  },
+  {
+    "id": "s38",
+    "category": "poi",
+    "question": "POI坐标缺失情况",
+    "status": "supported",
+    "expected_columns": [
+      "missing_latitude",
+      "missing_longitude"
+    ],
+    "reference_sql": "SELECT SUM(CASE WHEN latitude IS NULL THEN 1 ELSE 0 END) AS missing_latitude, SUM(CASE WHEN longitude IS NULL THEN 1 ELSE 0 END) AS missing_longitude FROM poi"
+  },
+  {
+    "id": "u01",
+    "category": "unsupported",
+    "question": "计算每个区域的真实入住率",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  },
+  {
+    "id": "u02",
+    "category": "unsupported",
+    "question": "估算每套房源去年的实际营业收入",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  },
+  {
+    "id": "u03",
+    "category": "unsupported",
+    "question": "各区域订单转化率是多少",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  },
+  {
+    "id": "u04",
+    "category": "unsupported",
+    "question": "统计房客取消订单的比例",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  },
+  {
+    "id": "u05",
+    "category": "unsupported",
+    "question": "比较各区域犯罪率与房价",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  },
+  {
+    "id": "u06",
+    "category": "unsupported",
+    "question": "计算房源步行到最近地铁站的时间",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  },
+  {
+    "id": "u07",
+    "category": "unsupported",
+    "question": "分析天气变化对预订量的因果影响",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  },
+  {
+    "id": "u08",
+    "category": "unsupported",
+    "question": "查询某房源2027年春节期间的真实成交价格",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  },
+  {
+    "id": "u09",
+    "category": "unsupported",
+    "question": "计算不同国籍客人的平均消费",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  },
+  {
+    "id": "u10",
+    "category": "unsupported",
+    "question": "统计房东收到的真实净利润",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  },
+  {
+    "id": "u11",
+    "category": "unsupported",
+    "question": "计算广告曝光到下单的漏斗转化",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  },
+  {
+    "id": "u12",
+    "category": "unsupported",
+    "question": "判断提高评分是否会导致收入增长",
+    "status": "unsupported",
+    "expected_columns": [],
+    "reference_sql": null
+  }
+]

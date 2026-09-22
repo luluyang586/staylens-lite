@@ -1,0 +1,11 @@
+poi_id,poi_name,poi_type,latitude,longitude,source,precision_note
+1,Sydney CBD,district,-33.8688,151.2093,manually curated approximate point,not an administrative centroid
+2,Central Station,transit,-33.8832,151.2067,manually curated approximate point,not entrance or walking distance
+3,Town Hall,transit,-33.8732,151.2065,manually curated approximate point,not entrance or walking distance
+4,Circular Quay,transit,-33.8612,151.2108,manually curated approximate point,not entrance or walking distance
+5,Sydney Opera House,attraction,-33.8568,151.2153,manually curated approximate point,illustrative location
+6,Darling Harbour,attraction,-33.8749,151.2009,manually curated approximate point,illustrative location
+7,Bondi Junction,transit,-33.8910,151.2473,manually curated approximate point,not entrance or walking distance
+8,Sydney Airport,airport,-33.9399,151.1753,manually curated approximate point,not a specific terminal
+9,University of Sydney,university,-33.8886,151.1873,manually curated approximate point,not a campus entrance
+10,UNSW,university,-33.9173,151.2313,manually curated approximate point,not a campus entrance

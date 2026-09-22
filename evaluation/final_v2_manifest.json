@@ -1,0 +1,20 @@
+{
+  "version": "final_v2",
+  "status": "frozen_before_live_run",
+  "prompt_sha256_at_freeze": {
+    "intent_parser.txt": "4b1f2f96adc616f4eb5c6cf43751a5160631b2a7cfed6a37455fc6f04e804909",
+    "text_to_sql.txt": "19e04824fc530a1b2af3d87db61f93493f9aa9206a173af854982f1f40aa0645"
+  },
+  "datasets": [
+    {
+      "file": "intent_final_v2_cases.json",
+      "count": 100,
+      "sha256": "01f36627ac5ecc305b50da8c8ceb8abec574094ba4e6528b0909fc0eabe9d7f6"
+    },
+    {
+      "file": "sql_final_v2_cases.json",
+      "count": 50,
+      "sha256": "4b402b8fff04001f7d2e2ae1aaf35244eb1c8fee038aa80e0d4a9e3ed2040a95"
+    }
+  ]
+}

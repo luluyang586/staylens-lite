@@ -1,0 +1,15 @@
+.env
+.DS_Store
+.Rhistory
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Raw data is large and re-downloadable — never commit it
+data/raw/
+data/*.duckdb
+!data/staylens_demo.duckdb
+data/*.sqlite
+data/runs/
+.pytest_cache/

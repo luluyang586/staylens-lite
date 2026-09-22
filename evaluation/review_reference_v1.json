@@ -1,0 +1,1017 @@
+[
+  {
+    "review_id": 1056811604367718163,
+    "comments": "Easy flat in fantastic location! Unbelievable for the price and time of year. Really happy with our stay.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "fantastic location"
+      },
+      {
+        "category": "value",
+        "sentiment": "positive",
+        "evidence": "Unbelievable for the price and time of year"
+      }
+    ]
+  },
+  {
+    "review_id": 438130315,
+    "comments": "Excellent stylish space close to Botany Bay and Captain Cook’s landing place in South Sydney. We loved the beach location close to the city. Great for a family or group of friends.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Excellent stylish space close to Botany Bay and Captain Cook’s landing place in South Sydney"
+      }
+    ]
+  },
+  {
+    "review_id": 597343150237464904,
+    "comments": "I had the most wonderful stay at Rob’s place! Perfect location just steps off the main strip and the room was beautiful. I couldn’t have been more comfortable, thank you!",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Perfect location just steps off the main strip"
+      }
+    ]
+  },
+  {
+    "review_id": 1509919044283888069,
+    "comments": "We absolutely loved our stay and Samuel and Mereke were incredibly helpful. Location is absolutely great and we would most certainly book again !",
+    "expected_tags": [
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Samuel and Mereke were incredibly helpful"
+      },
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Location is absolutely great"
+      }
+    ]
+  },
+  {
+    "review_id": 612136478,
+    "comments": "Great place<br/>Great location <br/>Amazing pool and view from the roof top<br/>We’ll be back for sure",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Great location"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "Amazing pool and view from the roof top"
+      }
+    ]
+  },
+  {
+    "review_id": 55711094,
+    "comments": "This apartment is fantastic.  Great views, quiet area but 2 mins from buzz of Potts Point, amazing views of the bay. In my mind, the best place to stay in Sydney.  Way better than any hotel. Rosslyn is an amazing host, i have stayed here twice now and will be back again many times i hope.  Highly recommend, it's a real find.",
+    "expected_tags": [
+      {
+        "category": "noise",
+        "sentiment": "positive",
+        "evidence": "quiet area"
+      },
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "2 mins from buzz of Potts Point"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Rosslyn is an amazing host"
+      }
+    ]
+  },
+  {
+    "review_id": 1088789224204891307,
+    "comments": "Great location and very close to train stations, cafes and restaurants. The room itself is also very spacious. Ben and Stefano were fantastic hosts.<br/>The room is above a busy street so there is a bit of car/traffic noise.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Great location and very close to train stations, cafes and restaurants"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "The room itself is also very spacious"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Ben and Stefano were fantastic hosts"
+      },
+      {
+        "category": "noise",
+        "sentiment": "negative",
+        "evidence": "there is a bit of car/traffic noise"
+      }
+    ]
+  },
+  {
+    "review_id": 1155406700675642673,
+    "comments": "The accommodation is in a lovely leafy, quiet neighbourhood in a beautiful, stately home.<br/>The room has stylish, modern furnishings and everything you need for a comfortable stay.<br/>Prompt and regular communication from Made Comfy.<br/>We enjoyed our stay.",
+    "expected_tags": [
+      {
+        "category": "noise",
+        "sentiment": "positive",
+        "evidence": "lovely leafy, quiet neighbourhood"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "stylish, modern furnishings and everything you need for a comfortable stay"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Prompt and regular communication from Made Comfy"
+      }
+    ]
+  },
+  {
+    "review_id": 1032966873243159061,
+    "comments": "One of the best Air BnBs that I have stayed at. The house is wonderfully charming and in a great location (easy access to public transit, but a quiet neighborhood). Craig was a friendly, generous, and responsive host.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "great location (easy access to public transit, but a quiet neighborhood)"
+      },
+      {
+        "category": "noise",
+        "sentiment": "positive",
+        "evidence": "quiet neighborhood"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Craig was a friendly, generous, and responsive host"
+      }
+    ]
+  },
+  {
+    "review_id": 579259957859603956,
+    "comments": "Handy to eastern suburbs, shops and public transport. Comfortable room and quiet.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Handy to eastern suburbs, shops and public transport"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "Comfortable room"
+      },
+      {
+        "category": "noise",
+        "sentiment": "positive",
+        "evidence": "quiet"
+      }
+    ]
+  },
+  {
+    "review_id": 853926685294527235,
+    "comments": "Clean, comfortable & great value. Good location close to Redfern station.",
+    "expected_tags": [
+      {
+        "category": "cleanliness",
+        "sentiment": "positive",
+        "evidence": "Clean"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "comfortable"
+      },
+      {
+        "category": "value",
+        "sentiment": "positive",
+        "evidence": "great value"
+      },
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Good location close to Redfern station"
+      }
+    ]
+  },
+  {
+    "review_id": 1259866468156044306,
+    "comments": "Our two main priorities are cleanliness and an accurate description of the accommodation. Both were ticked and there were no surprises. As everything was in order we didn’t need to engage with the hosts. For us it was a great stay.",
+    "expected_tags": [
+      {
+        "category": "cleanliness",
+        "sentiment": "positive",
+        "evidence": "Our two main priorities are cleanliness and an accurate description of the accommodation. Both were ticked and there were no surprises."
+      },
+      {
+        "category": "accuracy",
+        "sentiment": "positive",
+        "evidence": "Our two main priorities are cleanliness and an accurate description of the accommodation. Both were ticked and there were no surprises."
+      }
+    ]
+  },
+  {
+    "review_id": 1662075759275580731,
+    "comments": "Ngoc is very responsive to any enquiries. The house is clean and match to the descriptions. We will stay there again when we are in Sydney.",
+    "expected_tags": [
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Ngoc is very responsive to any enquiries"
+      },
+      {
+        "category": "cleanliness",
+        "sentiment": "positive",
+        "evidence": "The house is clean"
+      },
+      {
+        "category": "accuracy",
+        "sentiment": "positive",
+        "evidence": "match to the descriptions"
+      }
+    ]
+  },
+  {
+    "review_id": 1587378829702692154,
+    "comments": "very spacious and clean apartment, would happily stay again.",
+    "expected_tags": [
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "very spacious"
+      },
+      {
+        "category": "cleanliness",
+        "sentiment": "positive",
+        "evidence": "clean apartment"
+      }
+    ]
+  },
+  {
+    "review_id": 795952152515286225,
+    "comments": "Beautiful location and stylish place. The apartment is not the cleanest though. The coffee machine was moldy and smelled of cheese; definitely had not been cleaned in a while. Also for the price you are paying, you assume some kitchen or bathroom essentials would be provided. However you must buy or bring everything.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Beautiful location"
+      },
+      {
+        "category": "cleanliness",
+        "sentiment": "negative",
+        "evidence": "The apartment is not the cleanest though. The coffee machine was moldy and smelled of cheese; definitely had not been cleaned in a while."
+      },
+      {
+        "category": "value",
+        "sentiment": "negative",
+        "evidence": "for the price you are paying, you assume some kitchen or bathroom essentials would be provided"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "negative",
+        "evidence": "you must buy or bring everything"
+      }
+    ]
+  },
+  {
+    "review_id": 668233970,
+    "comments": "The place was lovely and Verity was very hospitable and kind whenever we were lucky enough to see her. Definitely worth the stay.",
+    "expected_tags": [
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Verity was very hospitable and kind"
+      },
+      {
+        "category": "value",
+        "sentiment": "positive",
+        "evidence": "Definitely worth the stay"
+      }
+    ]
+  },
+  {
+    "review_id": 1373565947963802625,
+    "comments": "We had a wonderful long weekend at Gabriel’s apartment. It had everything we needed, was clean and tidy and Gabriel’s communication was fantastic. Best of all is the amazing view from the apartment which is one of the best in Sydney. Worth every cent! We’ve been staying at Harbourside for years now and would never stay anywhere else, it’s the best!",
+    "expected_tags": [
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "It had everything we needed"
+      },
+      {
+        "category": "cleanliness",
+        "sentiment": "positive",
+        "evidence": "clean and tidy"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Gabriel’s communication was fantastic"
+      },
+      {
+        "category": "value",
+        "sentiment": "positive",
+        "evidence": "Worth every cent"
+      }
+    ]
+  },
+  {
+    "review_id": 508938016621172430,
+    "comments": "Amazing value, great location, and the staff are lovely and helpful!",
+    "expected_tags": [
+      {
+        "category": "value",
+        "sentiment": "positive",
+        "evidence": "Amazing value"
+      },
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "great location"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "the staff are lovely and helpful"
+      }
+    ]
+  },
+  {
+    "review_id": 1304773968014061561,
+    "comments": "Location for concerts or footy fine.<br/> But for price of cleaning. Terrible.<br/> Bedding sheets were unclean. <br/>Bed was not made from last visitor. <br/>Spare pillows putrid.<br/>Musty smell when we first entered. <br/>For the Airb&b said charge of cleaning. Mate you need new cleaner.<br/>Stayed in lot of Air b&b places all over world but this was not good.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Location for concerts or footy fine"
+      },
+      {
+        "category": "cleanliness",
+        "sentiment": "negative",
+        "evidence": "Bedding sheets were unclean"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "negative",
+        "evidence": "Bed was not made from last visitor"
+      },
+      {
+        "category": "value",
+        "sentiment": "negative",
+        "evidence": "But for price of cleaning. Terrible"
+      }
+    ]
+  },
+  {
+    "review_id": 1702629531717431406,
+    "comments": "Such a perfect location, very accomodating host. Walking distance to everything and definitely not overpriced. Would definitely stay here again.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Such a perfect location"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "very accomodating host"
+      },
+      {
+        "category": "value",
+        "sentiment": "positive",
+        "evidence": "definitely not overpriced"
+      }
+    ]
+  },
+  {
+    "review_id": 315082,
+    "comments": "We had a fantastic family weekend in Sydney, and Studio Yindi served as the ideal base-camp. We had everything we needed at our disposal, and our hosts were kind to check in with us every now and then to ensure that was the case. ",
+    "expected_tags": [
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "We had everything we needed at our disposal"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "our hosts were kind to check in with us every now and then"
+      }
+    ]
+  },
+  {
+    "review_id": 54951252,
+    "comments": "Grear place to stay, clean and tidy, recently renovated. Close to public transport, plenty of buses to city. also close to shopping centre and beach. The host is nice.",
+    "expected_tags": [
+      {
+        "category": "cleanliness",
+        "sentiment": "positive",
+        "evidence": "clean and tidy"
+      },
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Close to public transport"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "The host is nice"
+      }
+    ]
+  },
+  {
+    "review_id": 958359880325144790,
+    "comments": "It’s nice to stay at Pinky’s place. Pinky is friendly and helpful whenever I have questions.",
+    "expected_tags": [
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Pinky is friendly and helpful whenever I have questions"
+      }
+    ]
+  },
+  {
+    "review_id": 1466389176566164864,
+    "comments": "From first contact with the host everything was super simple. Great location directly opposite beach and minutes walk from loads of restaurants and cafes. Highly recommend",
+    "expected_tags": [
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "From first contact with the host everything was super simple"
+      },
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Great location directly opposite beach and minutes walk from loads of restaurants and cafes"
+      }
+    ]
+  },
+  {
+    "review_id": 1354013045035520437,
+    "comments": "Thanks Zheng. The communicate and help was amazing. So helpful. I felt comfortable in this room and the surrounding.",
+    "expected_tags": [
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "The communicate and help was amazing. So helpful"
+      }
+    ]
+  },
+  {
+    "review_id": 1683076275868332092,
+    "comments": "Tiffany’s place was very comfortable and I felt right at home. Plenty of utensils and kitchen space also.",
+    "expected_tags": [
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "very comfortable and I felt right at home. Plenty of utensils and kitchen space"
+      }
+    ]
+  },
+  {
+    "review_id": 232716478,
+    "comments": "Excellent apartment in an exclusive, quiet and leafy location moments away from the harbour and ferry. The kitchen and bathroom are small but stylishly renovated. Great front verandah - a nice little place to enjoy the sunset.",
+    "expected_tags": [
+      {
+        "category": "noise",
+        "sentiment": "positive",
+        "evidence": "quiet and leafy location"
+      },
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "moments away from the harbour and ferry"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "mixed",
+        "evidence": "The kitchen and bathroom are small but stylishly renovated"
+      }
+    ]
+  },
+  {
+    "review_id": 606114618746772041,
+    "comments": "Lovely and comfortable two-bedroom cottage (one queen bed and two singles) with well-equipped kitchen and spotlessly clean. Felt private and safe in a nice family area. Great communication, thanks Jemma.",
+    "expected_tags": [
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "comfortable two-bedroom cottage (one queen bed and two singles) with well-equipped kitchen"
+      },
+      {
+        "category": "cleanliness",
+        "sentiment": "positive",
+        "evidence": "spotlessly clean"
+      },
+      {
+        "category": "safety",
+        "sentiment": "positive",
+        "evidence": "Felt private and safe"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Great communication"
+      }
+    ]
+  },
+  {
+    "review_id": 1332243911760788162,
+    "comments": "This is a great apartment in a really convenient location. We took the Metro into the CBD which only takes about 12-15 minutes. Air conditioner worked well, and the kitchen had everything we needed to prepare our meals. Beds were nice and comfortable.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "really convenient location"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "Air conditioner worked well, and the kitchen had everything we needed to prepare our meals. Beds were nice and comfortable"
+      }
+    ]
+  },
+  {
+    "review_id": 1404069129019332342,
+    "comments": "Fantastic place to stay, lovely views, pool and walking distance to transport & restaurants.",
+    "expected_tags": [
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "lovely views, pool"
+      },
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "walking distance to transport & restaurants"
+      }
+    ]
+  },
+  {
+    "review_id": 1459114755885146912,
+    "comments": "My sister and I had a great stay at Chris's place. The location was so nice - close to the city but still peaceful! Easy ferry ride anywhere we needed to go. It was a super clean and cute attic - looked like the photos. Would stay again and recommend anyone to stay as well. Thanks Chris!",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "close to the city but still peaceful"
+      },
+      {
+        "category": "cleanliness",
+        "sentiment": "positive",
+        "evidence": "super clean"
+      },
+      {
+        "category": "accuracy",
+        "sentiment": "positive",
+        "evidence": "looked like the photos"
+      }
+    ]
+  },
+  {
+    "review_id": 1264847374923570209,
+    "comments": "Close walk to park, pier and central area. Lots of restaurants walking distance. Apartment was exactly like photos, clean, modern and had everything necessary for a short comfortable stay. Would definitely book again.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Close walk to park, pier and central area. Lots of restaurants walking distance"
+      },
+      {
+        "category": "accuracy",
+        "sentiment": "positive",
+        "evidence": "Apartment was exactly like photos"
+      },
+      {
+        "category": "cleanliness",
+        "sentiment": "positive",
+        "evidence": "clean"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "had everything necessary for a short comfortable stay"
+      }
+    ]
+  },
+  {
+    "review_id": 1235860629036960284,
+    "comments": "Christine and Geoff really put in the effort with lots of thoughtful touches.  I really enjoyed the supplies to get you started in the morning.  Excellent stay as advertised.",
+    "expected_tags": [
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Christine and Geoff really put in the effort with lots of thoughtful touches"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "I really enjoyed the supplies to get you started in the morning"
+      },
+      {
+        "category": "accuracy",
+        "sentiment": "positive",
+        "evidence": "Excellent stay as advertised"
+      }
+    ]
+  },
+  {
+    "review_id": 1651892197353497528,
+    "comments": "The appartment was very large for 2 bedrooms. The living areas were also bigger than expected.  The balcony was a great space too. Location with easy access to airport and M8/M5 was perfect. Plenty of space, easy access and extremely well priced",
+    "expected_tags": [
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "The appartment was very large for 2 bedrooms. The living areas were also bigger than expected."
+      },
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Location with easy access to airport and M8/M5 was perfect"
+      },
+      {
+        "category": "value",
+        "sentiment": "positive",
+        "evidence": "extremely well priced"
+      }
+    ]
+  },
+  {
+    "review_id": 1189451836099135295,
+    "comments": "The house was wonderful , it's clean and matched the description, the property seems new and well built. Alan also was very nice and helpful.",
+    "expected_tags": [
+      {
+        "category": "cleanliness",
+        "sentiment": "positive",
+        "evidence": "it's clean"
+      },
+      {
+        "category": "accuracy",
+        "sentiment": "positive",
+        "evidence": "matched the description"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Alan also was very nice and helpful"
+      }
+    ]
+  },
+  {
+    "review_id": 1589567651421763867,
+    "comments": "Great place! Nice and safe Location.<br/>Spacious apartment that is fully equipped",
+    "expected_tags": [
+      {
+        "category": "safety",
+        "sentiment": "positive",
+        "evidence": "Nice and safe Location"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "Spacious apartment that is fully equipped"
+      }
+    ]
+  },
+  {
+    "review_id": 1501920667368414000,
+    "comments": "The place is a great! Amazing view ❤️ we were supposed to stay outside and explore but the place kept us all night just enjoying the view. Thankful for the host as they are quick to respond when i messaged them about the key is not in the lock box. It is not their fault but the previous guest. <br/>We will definitely come back and recommend it.",
+    "expected_tags": [
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "quick to respond when i messaged them"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "negative",
+        "evidence": "the key is not in the lock box"
+      }
+    ]
+  },
+  {
+    "review_id": 1554064282317476796,
+    "comments": "we had a lovely stay at James place. The home was very pet friendly and the yard was perfect and secure even for a small pup. We would definitely stay here again. Thank you",
+    "expected_tags": [
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "The home was very pet friendly and the yard was perfect"
+      },
+      {
+        "category": "safety",
+        "sentiment": "positive",
+        "evidence": "secure even for a small pup"
+      }
+    ]
+  },
+  {
+    "review_id": 1703421758411113605,
+    "comments": "Great location in Newtown , about a block off the Main Street ,close to bus and train .",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Great location in Newtown , about a block off the Main Street ,close to bus and train"
+      }
+    ]
+  },
+  {
+    "review_id": 964855520537901571,
+    "comments": "I had such a great stay at Jenny's house. It's in a safe, quiet neighborhood with tons of bus lines to the CBD very close to the house. The room was great - exactly as described and such a comfortable, big bed. Jenny was a wonderful host. She was so welcoming and friendly. She's such a kind person. I would absolutely stay here again.",
+    "expected_tags": [
+      {
+        "category": "safety",
+        "sentiment": "positive",
+        "evidence": "safe, quiet neighborhood"
+      },
+      {
+        "category": "noise",
+        "sentiment": "positive",
+        "evidence": "quiet neighborhood"
+      },
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "tons of bus lines to the CBD very close to the house"
+      },
+      {
+        "category": "accuracy",
+        "sentiment": "positive",
+        "evidence": "exactly as described"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "such a comfortable, big bed"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Jenny was a wonderful host. She was so welcoming and friendly"
+      }
+    ]
+  },
+  {
+    "review_id": 1517867160183131523,
+    "comments": "We had a nice stay at Tommy’s apartment. The view was fantastic and the location is super handy to all the tourist hot spots. Beds were comfortable and apartment was spacious. Tommy was kind to let us check in early due to our early flights and kept our bags locked up after check out as we had a late flight home. Unfortunately for 3 of our nights we had noisy neighbours from a different building with was frustrating at 3am but that’s to be expected in the city I guess. Thanks for having us 🙂",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "location is super handy to all the tourist hot spots"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "Beds were comfortable and apartment was spacious"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Tommy was kind to let us check in early"
+      },
+      {
+        "category": "noise",
+        "sentiment": "negative",
+        "evidence": "we had noisy neighbours from a different building with was frustrating at 3am"
+      }
+    ]
+  },
+  {
+    "review_id": 1301054618393395893,
+    "comments": "Whilst the location was superb, the house itself needs some updating and proper cleaning. The place was dusty and all the mirrors were smeared and the bathroom really needs to be upgraded with an extractor fan and the tiles and grout needs a very good clean and on a lovely sunny week we couldn’t use the yard as it was full of weeds",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "location was superb"
+      },
+      {
+        "category": "cleanliness",
+        "sentiment": "negative",
+        "evidence": "needs some updating and proper cleaning. The place was dusty and all the mirrors were smeared"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "negative",
+        "evidence": "the bathroom really needs to be upgraded with an extractor fan"
+      }
+    ]
+  },
+  {
+    "review_id": 1099579126448949302,
+    "comments": "Apart from the last question I was asked to answer, every other question got 5 stars.<br/>The price of over $700 a night was absolutely not worth it. Its what you expect to pay at a 5 star resort. But.... like every other accommodation in Sydney and Melbourne for Taylor Swift the price was increased dramatically. <br/>Would I stay here again? Absolutely I would at the regular rate. Fantastic location, very friendly staff and the apartment had everything we needed.",
+    "expected_tags": [
+      {
+        "category": "value",
+        "sentiment": "mixed",
+        "evidence": "The price of over $700 a night was absolutely not worth it. Its what you expect to pay at a 5 star resort. But.... like every other accommodation in Sydney and Melbourne for Taylor Swift the price was increased dramatically. <br/>Would I stay here again? Absolutely I would at the regular rate."
+      },
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Fantastic location"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "very friendly staff"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "the apartment had everything we needed"
+      }
+    ]
+  },
+  {
+    "review_id": 875622449224697514,
+    "comments": "Not recommended, receptionist asked me to stay somewhere else when I feedback that the room air conditioner is not working at all. Bad service attitude.",
+    "expected_tags": [
+      {
+        "category": "amenities",
+        "sentiment": "negative",
+        "evidence": "the room air conditioner is not working at all"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "negative",
+        "evidence": "receptionist asked me to stay somewhere else when I feedback that the room air conditioner is not working at all. Bad service attitude"
+      }
+    ]
+  },
+  {
+    "review_id": 1089443173871025284,
+    "comments": "Good location for us on this trip. <br/>Disappointed that there’s no Air Conditioning, a fan doesn’t quite cut it at 30+. <br/>Also disappointed that tea and coffee was not provided. <br/>Other than that it’s a good place to stay in Newtown.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Good location for us on this trip"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "negative",
+        "evidence": "Disappointed that there’s no Air Conditioning, a fan doesn’t quite cut it at 30+. <br/>Also disappointed that tea and coffee was not provided"
+      }
+    ]
+  },
+  {
+    "review_id": 1404017619641415040,
+    "comments": "This Airbnb was one of the worst airbnbs I have ever stayed at. The photos advertised did not match the apartment layout in person. The place was also infested with cockroaches and bugs everywhere. We even found them in the kitchen cupboards and fridge. Not happy at all.",
+    "expected_tags": [
+      {
+        "category": "accuracy",
+        "sentiment": "negative",
+        "evidence": "The photos advertised did not match the apartment layout in person"
+      },
+      {
+        "category": "cleanliness",
+        "sentiment": "negative",
+        "evidence": "The place was also infested with cockroaches and bugs everywhere"
+      }
+    ]
+  },
+  {
+    "review_id": 1288743755073556764,
+    "comments": "Ads/ hotel “look” good but there is no mgmt on site, the hotel is not secure/safe as s.o.p. is to leave a side door open with door stop 24 hrs, the desk clerks are transient so don’t care about the level of service they provide and the hot water is scarce. I could go on, but suffice to say, I won’t be returning and I don’t recommend this property.",
+    "expected_tags": [
+      {
+        "category": "safety",
+        "sentiment": "negative",
+        "evidence": "the hotel is not secure/safe as s.o.p. is to leave a side door open with door stop 24 hrs"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "negative",
+        "evidence": "the desk clerks are transient so don’t care about the level of service they provide"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "negative",
+        "evidence": "the hot water is scarce"
+      }
+    ]
+  },
+  {
+    "review_id": 820543128809547092,
+    "comments": "Super Location in centre of Bondi road however extremely small and photos were quite misleading in terms of space. Tiles on bathroom floor had lifted and were quite dangerous if bare footed. No views and room quite dull. Maria was very easy to communicate with bug we felt it was extremely over priced for what it was.",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Super Location in centre of Bondi road"
+      },
+      {
+        "category": "accuracy",
+        "sentiment": "negative",
+        "evidence": "photos were quite misleading in terms of space"
+      },
+      {
+        "category": "safety",
+        "sentiment": "negative",
+        "evidence": "Tiles on bathroom floor had lifted and were quite dangerous if bare footed"
+      },
+      {
+        "category": "value",
+        "sentiment": "negative",
+        "evidence": "we felt it was extremely over priced for what it was"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "positive",
+        "evidence": "Maria was very easy to communicate with"
+      }
+    ]
+  },
+  {
+    "review_id": 1375795672929699994,
+    "comments": "Pros: Location awesome, pretty spacious, comfy pillows, air con great. <br/>Cons: smelly(very musky), bed dirty(had re wash ourselves), rules about taking out and separating trash even though high cleaning fee, misleading about security, host not helpful(no apology or assistance for dirty arrival).",
+    "expected_tags": [
+      {
+        "category": "location",
+        "sentiment": "positive",
+        "evidence": "Location awesome"
+      },
+      {
+        "category": "amenities",
+        "sentiment": "positive",
+        "evidence": "comfy pillows, air con great"
+      },
+      {
+        "category": "cleanliness",
+        "sentiment": "negative",
+        "evidence": "smelly(very musky), bed dirty(had re wash ourselves)"
+      },
+      {
+        "category": "value",
+        "sentiment": "negative",
+        "evidence": "high cleaning fee"
+      },
+      {
+        "category": "accuracy",
+        "sentiment": "negative",
+        "evidence": "misleading about security"
+      },
+      {
+        "category": "host_service",
+        "sentiment": "negative",
+        "evidence": "host not helpful(no apology or assistance for dirty arrival)"
+      }
+    ]
+  },
+  {
+    "review_id": 1545356194874437409,
+    "comments": "The place is nice and fits the budget, but the area feels a bit unsafe at night. There are often people drinking and hanging around in their cars near the pub, which makes it uncomfortable, especially for families. It would really help if there were some CCTV cameras or better security monitoring outside.",
+    "expected_tags": [
+      {
+        "category": "value",
+        "sentiment": "positive",
+        "evidence": "fits the budget"
+      },
+      {
+        "category": "safety",
+        "sentiment": "negative",
+        "evidence": "the area feels a bit unsafe at night"
+      }
+    ]
+  },
+  {
+    "review_id": 610204213,
+    "comments": "Was all good",
+    "expected_tags": []
+  },
+  {
+    "review_id": 365943479,
+    "comments": "Couldn't be better!",
+    "expected_tags": []
+  },
+  {
+    "review_id": 1389541814937964793,
+    "comments": "Pleasant staying !",
+    "expected_tags": []
+  },
+  {
+    "review_id": 1637385879081795331,
+    "comments": "Great stay all round!",
+    "expected_tags": []
+  },
+  {
+    "review_id": 906860712417838492,
+    "comments": "A relaxing time. Thanks.",
+    "expected_tags": []
+  }
+]

@@ -1,0 +1,798 @@
+{
+  "generated_at": "2026-09-21T12:07:08.449536+00:00",
+  "suite": "sql_final_v2",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "prompt_sha256": "19e04824fc530a1b2af3d87db61f93493f9aa9206a173af854982f1f40aa0645",
+  "dataset_sha256": "4b402b8fff04001f7d2e2ae1aaf35244eb1c8fee038aa80e0d4a9e3ed2040a95",
+  "api_usage": {
+    "calls": 66,
+    "input_tokens": 76671,
+    "output_tokens": 2538,
+    "total_tokens": 79209,
+    "usage_available_for_all_calls": true
+  },
+  "results": {
+    "status_execution_accuracy": 0.96,
+    "output_contract_accuracy": 0.82,
+    "semantic_result_accuracy": 0.78,
+    "n": 50,
+    "cases": [
+      {
+        "id": "s01",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "listing_count"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", COUNT(*) AS \"listing_count\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"neighbourhood\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s02",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "room_type",
+          "listing_count",
+          "median_base_price_aud"
+        ],
+        "columns_ok": false,
+        "status_match": true,
+        "result_match": null,
+        "passed": false,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"room_type\" AS \"room_type\", COUNT(*) AS \"listing_count\", MEDIAN(\"listings_clean\".\"base_price_aud\") AS \"median_base_price_aud\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"room_type\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s03",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "avg_accommodates",
+          "n"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", AVG(\"listings_clean\".\"accommodates\") AS \"avg_accommodates\", COUNT(*) AS \"n\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"neighbourhood\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s04",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "avg_bedrooms",
+          "n"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", AVG(\"listings_clean\".\"bedrooms\") AS \"avg_bedrooms\", COUNT(*) AS \"n\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"neighbourhood\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s05",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "room_type",
+          "avg_base_price_aud",
+          "n"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"room_type\" AS \"room_type\", AVG(\"listings_clean\".\"base_price_aud\") AS \"avg_base_price_aud\", COUNT(*) AS \"n\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"room_type\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s06",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "min_price_aud",
+          "max_price_aud"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", MIN(\"listings_clean\".\"base_price_aud\") AS \"min_price_aud\", MAX(\"listings_clean\".\"base_price_aud\") AS \"max_price_aud\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"neighbourhood\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s07",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "superhost_rate",
+          "n"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", AVG(CASE WHEN \"listings_clean\".\"host_is_superhost\" THEN 1.0 ELSE 0.0 END) AS \"superhost_rate\", COUNT(*) AS \"n\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"neighbourhood\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s08",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "room_type",
+          "instant_rate",
+          "n"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"room_type\" AS \"room_type\", AVG(CASE WHEN \"listings_clean\".\"instant_bookable\" THEN 1.0 ELSE 0.0 END) AS \"instant_rate\", COUNT(*) AS \"n\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"room_type\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s09",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "missing_rate"
+        ],
+        "columns_ok": false,
+        "status_match": true,
+        "result_match": null,
+        "passed": false,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", AVG(CASE WHEN \"listings_clean\".\"base_price_aud\" IS NULL THEN 1.0 ELSE 0.0 END) AS \"missing_rate\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"neighbourhood\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s10",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "avg_rating",
+          "n"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", AVG(\"listings_clean\".\"rating_5\") AS \"avg_rating\", COUNT(*) AS \"n\" FROM \"listings_clean\" AS \"listings_clean\" WHERE NOT \"listings_clean\".\"rating_5\" IS NULL GROUP BY \"listings_clean\".\"neighbourhood\" HAVING COUNT(*) >= 10 ORDER BY \"avg_rating\" DESC) AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s11",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "listing_count"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", COUNT(*) AS \"listing_count\" FROM \"listings_clean\" AS \"listings_clean\" WHERE \"listings_clean\".\"base_price_aud\" <= 120 GROUP BY \"listings_clean\".\"neighbourhood\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s12",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "room_type",
+          "listing_count"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", \"listings_clean\".\"room_type\" AS \"room_type\", COUNT(*) AS \"listing_count\" FROM \"listings_clean\" AS \"listings_clean\" WHERE \"listings_clean\".\"room_type\" = 'Private room' GROUP BY \"listings_clean\".\"neighbourhood\", \"listings_clean\".\"room_type\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s13",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "room_type",
+          "listing_count"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": false,
+        "passed": false,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", \"listings_clean\".\"room_type\" AS \"room_type\", COUNT(*) AS \"listing_count\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"neighbourhood\", \"listings_clean\".\"room_type\" ORDER BY \"neighbourhood\", \"room_type\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s14",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "listing_count"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", COUNT(*) AS \"listing_count\" FROM \"listings_clean\" AS \"listings_clean\" WHERE \"listings_clean\".\"accommodates\" >= 6 GROUP BY \"listings_clean\".\"neighbourhood\" ORDER BY \"neighbourhood\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s15",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "room_type",
+          "listing_count"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"room_type\" AS \"room_type\", COUNT(*) AS \"listing_count\" FROM \"listings_clean\" AS \"listings_clean\" WHERE NOT \"listings_clean\".\"listing_id\" IN (SELECT DISTINCT \"reviews_clean\".\"listing_id\" AS \"listing_id\" FROM \"reviews_clean\" AS \"reviews_clean\") GROUP BY \"listings_clean\".\"room_type\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s16",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "listing_count"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", COUNT(*) AS \"listing_count\" FROM \"listings_clean\" AS \"listings_clean\" WHERE NOT \"listings_clean\".\"rating_5\" IS NULL AND \"listings_clean\".\"rating_5\" >= 4.8 GROUP BY \"listings_clean\".\"neighbourhood\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s17",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "avg_rating",
+          "superhost_rate"
+        ],
+        "columns_ok": false,
+        "status_match": true,
+        "result_match": null,
+        "passed": false,
+        "sql": "SELECT * FROM (SELECT AVG(\"listings_clean\".\"rating_5\") AS \"avg_rating\", AVG(CASE WHEN \"listings_clean\".\"host_is_superhost\" THEN 1.0 ELSE 0.0 END) AS \"superhost_rate\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"host_is_superhost\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 2
+      },
+      {
+        "id": "s18",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "avg_base_price_instant_aud",
+          "avg_base_price_non_instant_aud"
+        ],
+        "columns_ok": false,
+        "status_match": true,
+        "result_match": null,
+        "passed": false,
+        "sql": "SELECT * FROM (SELECT AVG(CASE WHEN \"listings_clean\".\"instant_bookable\" THEN \"listings_clean\".\"base_price_aud\" END) AS \"avg_base_price_instant_aud\", AVG(CASE WHEN NOT \"listings_clean\".\"instant_bookable\" THEN \"listings_clean\".\"base_price_aud\" END) AS \"avg_base_price_non_instant_aud\" FROM \"listings_clean\" AS \"listings_clean\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s19",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "avg_accommodates",
+          "listing_count",
+          "median_base_price_aud"
+        ],
+        "columns_ok": false,
+        "status_match": true,
+        "result_match": null,
+        "passed": false,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"accommodates\" AS \"avg_accommodates\", COUNT(*) AS \"listing_count\", MEDIAN(\"listings_clean\".\"base_price_aud\") AS \"median_base_price_aud\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"accommodates\" ORDER BY \"avg_accommodates\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s20",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "median_minimum_nights"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", MEDIAN(\"listings_clean\".\"minimum_nights\") AS \"median_minimum_nights\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"neighbourhood\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s21",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "listing_id",
+          "listing_name",
+          "base_price_aud"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"listing_id\" AS \"listing_id\", \"listings_clean\".\"listing_name\" AS \"listing_name\", \"listings_clean\".\"base_price_aud\" AS \"base_price_aud\" FROM \"listings_clean\" AS \"listings_clean\" ORDER BY \"base_price_aud\" DESC LIMIT 10) AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s22",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "listing_id",
+          "listing_name",
+          "base_price_aud",
+          "price_rank"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (WITH \"ranked_listings\" AS (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", \"listings_clean\".\"listing_id\" AS \"listing_id\", \"listings_clean\".\"listing_name\" AS \"listing_name\", \"listings_clean\".\"base_price_aud\" AS \"base_price_aud\", ROW_NUMBER() OVER (PARTITION BY \"listings_clean\".\"neighbourhood\" ORDER BY \"listings_clean\".\"base_price_aud\" DESC) AS \"price_rank\" FROM \"listings_clean\" AS \"listings_clean\") SELECT \"ranked_listings\".\"neighbourhood\" AS \"neighbourhood\", \"ranked_listings\".\"listing_id\" AS \"listing_id\", \"ranked_listings\".\"listing_name\" AS \"listing_name\", \"ranked_listings\".\"base_price_aud\" AS \"base_price_aud\", \"ranked_listings\".\"price_rank\" AS \"price_rank\" FROM \"ranked_listings\" AS \"ranked_listings\" WHERE \"ranked_listings\".\"price_rank\" = 1) AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s23",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "listing_id",
+          "listing_name",
+          "number_of_reviews"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"listing_id\" AS \"listing_id\", \"listings_clean\".\"listing_name\" AS \"listing_name\", \"listings_clean\".\"number_of_reviews\" AS \"number_of_reviews\" FROM \"listings_clean\" AS \"listings_clean\" ORDER BY \"number_of_reviews\" DESC LIMIT 20) AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s24",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "avg_rating",
+          "n"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", AVG(\"listings_clean\".\"rating_5\") AS \"avg_rating\", COUNT(*) AS \"n\" FROM \"listings_clean\" AS \"listings_clean\" WHERE NOT \"listings_clean\".\"rating_5\" IS NULL GROUP BY \"listings_clean\".\"neighbourhood\" HAVING COUNT(*) >= 20 ORDER BY \"avg_rating\" DESC LIMIT 10) AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s25",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "min_date",
+          "max_date"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT MIN(\"calendar_clean\".\"stay_date\") AS \"min_date\", MAX(\"calendar_clean\".\"stay_date\") AS \"max_date\" FROM \"calendar_clean\" AS \"calendar_clean\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s26",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "month",
+          "available_rate"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT DATE_TRUNC('MONTH', \"calendar_clean\".\"stay_date\") AS \"month\", AVG(CASE WHEN \"calendar_clean\".\"available\" THEN 1.0 ELSE 0.0 END) AS \"available_rate\" FROM \"calendar_clean\" AS \"calendar_clean\" GROUP BY DATE_TRUNC('MONTH', \"calendar_clean\".\"stay_date\") ORDER BY \"month\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s27",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "total_available_calendar_records"
+        ],
+        "columns_ok": false,
+        "status_match": true,
+        "result_match": null,
+        "passed": false,
+        "sql": "SELECT * FROM (SELECT COUNT(*) AS \"total_available_calendar_records\" FROM \"calendar_clean\" AS \"calendar_clean\" WHERE \"calendar_clean\".\"available\" = TRUE) AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s28",
+        "expected_status": "supported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": false,
+        "status_match": false,
+        "result_match": null,
+        "passed": false,
+        "sql": null,
+        "reason": "Missing required field for daily availability from 2026-12.",
+        "attempt_count": 2
+      },
+      {
+        "id": "s29",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "month",
+          "avg_minimum_nights"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT DATE_TRUNC('MONTH', \"calendar_clean\".\"stay_date\") AS \"month\", AVG(\"calendar_clean\".\"minimum_nights\") AS \"avg_minimum_nights\" FROM \"calendar_clean\" AS \"calendar_clean\" GROUP BY DATE_TRUNC('MONTH', \"calendar_clean\".\"stay_date\") ORDER BY \"month\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s30",
+        "expected_status": "supported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": false,
+        "status_match": false,
+        "result_match": null,
+        "passed": false,
+        "sql": null,
+        "reason": "Calendar data for date-specific availability requests is absent; we cannot provide availability for a specific date.",
+        "attempt_count": 2
+      },
+      {
+        "id": "s31",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "min_date",
+          "max_date"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT MIN(\"reviews_clean\".\"review_date\") AS \"min_date\", MAX(\"reviews_clean\".\"review_date\") AS \"max_date\" FROM \"reviews_clean\" AS \"reviews_clean\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s32",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "month",
+          "review_count"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT DATE_TRUNC('MONTH', \"reviews_clean\".\"review_date\") AS \"month\", COUNT(*) AS \"review_count\" FROM \"reviews_clean\" AS \"reviews_clean\" WHERE \"reviews_clean\".\"review_date\" >= CAST('2026-01-01' AS DATE) AND \"reviews_clean\".\"review_date\" < CAST('2027-01-01' AS DATE) GROUP BY DATE_TRUNC('MONTH', \"reviews_clean\".\"review_date\") ORDER BY \"month\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s33",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "listing_id",
+          "review_count"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": false,
+        "passed": false,
+        "sql": "SELECT * FROM (SELECT \"reviews_clean\".\"listing_id\" AS \"listing_id\", COUNT(*) AS \"review_count\" FROM \"reviews_clean\" AS \"reviews_clean\" GROUP BY \"reviews_clean\".\"listing_id\" ORDER BY \"review_count\" DESC LIMIT 10) AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s34",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "neighbourhood",
+          "review_count"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"neighbourhood\" AS \"neighbourhood\", COUNT(\"reviews_clean\".\"review_id\") AS \"review_count\" FROM \"listings_clean\" AS \"listings_clean\" LEFT JOIN \"reviews_clean\" AS \"reviews_clean\" ON \"listings_clean\".\"listing_id\" = \"reviews_clean\".\"listing_id\" GROUP BY \"listings_clean\".\"neighbourhood\" ORDER BY \"neighbourhood\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s35",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "room_type",
+          "n",
+          "avg_reviews_per_listing"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"listings_clean\".\"room_type\" AS \"room_type\", COUNT(*) AS \"n\", AVG(\"listings_clean\".\"number_of_reviews\") AS \"avg_reviews_per_listing\" FROM \"listings_clean\" AS \"listings_clean\" GROUP BY \"listings_clean\".\"room_type\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 2
+      },
+      {
+        "id": "s36",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "poi_type",
+          "n"
+        ],
+        "columns_ok": false,
+        "status_match": true,
+        "result_match": null,
+        "passed": false,
+        "sql": "SELECT * FROM (SELECT \"poi\".\"poi_type\" AS \"poi_type\", COUNT(*) AS \"n\" FROM \"poi\" AS \"poi\" GROUP BY \"poi\".\"poi_type\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s37",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "poi_name",
+          "poi_type"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT \"poi\".\"poi_name\" AS \"poi_name\", \"poi\".\"poi_type\" AS \"poi_type\" FROM \"poi\" AS \"poi\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "s38",
+        "expected_status": "supported",
+        "actual_status": "supported",
+        "columns": [
+          "missing_latitude",
+          "missing_longitude"
+        ],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": true,
+        "passed": true,
+        "sql": "SELECT * FROM (SELECT AVG(CASE WHEN \"poi\".\"latitude\" IS NULL THEN 1.0 ELSE 0.0 END) AS \"missing_latitude\", AVG(CASE WHEN \"poi\".\"longitude\" IS NULL THEN 1.0 ELSE 0.0 END) AS \"missing_longitude\" FROM \"poi\" AS \"poi\") AS bounded_result LIMIT 200",
+        "reason": null,
+        "attempt_count": 1
+      },
+      {
+        "id": "u01",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "真实入住率的计算需要有总入住率数据，但缺少此类信息（如实际预订情况等），无法直接计算。",
+        "attempt_count": 2
+      },
+      {
+        "id": "u02",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "The schema does not contain fields for revenue or bookings, which are necessary to estimate actual revenue.",
+        "attempt_count": 2
+      },
+      {
+        "id": "u03",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "The schema does not provide a direct way to calculate order conversion rates, as it lacks data on actual bookings or transactions.",
+        "attempt_count": 2
+      },
+      {
+        "id": "u04",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "The schema does not contain any fields related to guest cancellations or order cancellations.",
+        "attempt_count": 2
+      },
+      {
+        "id": "u05",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "Crime rate data is not included in the approved schema.",
+        "attempt_count": 2
+      },
+      {
+        "id": "u06",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "The schema does not contain any fields related to walking time to the nearest subway station or any point of interest (POI) data that could be correlated with such a metric.",
+        "attempt_count": 2
+      },
+      {
+        "id": "u07",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "The required data related to weather changes and booking volume is not present in the approved schema.",
+        "attempt_count": 2
+      },
+      {
+        "id": "u08",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "The requested real transaction prices for a specific holiday period are not supported as the schema does not contain daily price data.",
+        "attempt_count": 2
+      },
+      {
+        "id": "u09",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "The schema does not include nationality or related information about guest nationality needed to calculate average spending by nationality.",
+        "attempt_count": 2
+      },
+      {
+        "id": "u10",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "The required raw data for calculating real net profits, specifically costs and expenses, is absent from the approved schema.",
+        "attempt_count": 2
+      },
+      {
+        "id": "u11",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "Required fields for calculating ad impressions and order conversions are absent from the approved schema.",
+        "attempt_count": 2
+      },
+      {
+        "id": "u12",
+        "expected_status": "unsupported",
+        "actual_status": "unsupported",
+        "columns": [],
+        "columns_ok": true,
+        "status_match": true,
+        "result_match": null,
+        "passed": true,
+        "sql": null,
+        "reason": "The schema does not contain revenue data or income metrics, preventing any analysis of income growth related to rating.",
+        "attempt_count": 2
+      }
+    ]
+  }
+}

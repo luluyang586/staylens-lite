@@ -1,0 +1,248 @@
+{
+  "generated_at": "2026-09-22T00:58:53.619010+00:00",
+  "data": {
+    "data_kind": "real_public_snapshot",
+    "snapshot": "2026-06-16",
+    "source_url": "https://insideairbnb.com/get-the-data/",
+    "calendar_has_price": "false",
+    "built_at": "2026-09-20T15:07:04.619970+00:00"
+  },
+  "deterministic": {
+    "end_to_end": {
+      "passed": 10,
+      "total": 10,
+      "cases": [
+        {
+          "id": "basic_exploration",
+          "expected_status": "ok",
+          "actual_status": "ok",
+          "passed": true,
+          "rows": 5,
+          "warnings": [
+            "评论尚未经过模型分析，使用中性分；不能据此判断没有风险。"
+          ]
+        },
+        {
+          "id": "total_budget",
+          "expected_status": "ok",
+          "actual_status": "ok",
+          "passed": true,
+          "rows": 5,
+          "warnings": [
+            "评论尚未经过模型分析，使用中性分；不能据此判断没有风险。"
+          ]
+        },
+        {
+          "id": "private_room",
+          "expected_status": "ok",
+          "actual_status": "ok",
+          "passed": true,
+          "rows": 5,
+          "warnings": [
+            "评论尚未经过模型分析，使用中性分；不能据此判断没有风险。"
+          ]
+        },
+        {
+          "id": "known_area",
+          "expected_status": "ok",
+          "actual_status": "ok",
+          "passed": true,
+          "rows": 5,
+          "warnings": [
+            "评论尚未经过模型分析，使用中性分；不能据此判断没有风险。"
+          ]
+        },
+        {
+          "id": "known_poi_distance",
+          "expected_status": "ok",
+          "actual_status": "ok",
+          "passed": true,
+          "rows": 5,
+          "warnings": [
+            "评论尚未经过模型分析，使用中性分；不能据此判断没有风险。"
+          ]
+        },
+        {
+          "id": "unknown_poi",
+          "expected_status": "unknown_poi",
+          "actual_status": "unknown_poi",
+          "passed": true,
+          "rows": 0,
+          "warnings": []
+        },
+        {
+          "id": "unknown_area",
+          "expected_status": "unknown_area",
+          "actual_status": "unknown_area",
+          "passed": true,
+          "rows": 0,
+          "warnings": []
+        },
+        {
+          "id": "date_without_daily_price",
+          "expected_status": "date_price_unavailable",
+          "actual_status": "date_price_unavailable",
+          "passed": true,
+          "rows": 0,
+          "warnings": []
+        },
+        {
+          "id": "impossible_budget",
+          "expected_status": "no_results",
+          "actual_status": "no_results",
+          "passed": true,
+          "rows": 0,
+          "warnings": []
+        },
+        {
+          "id": "transit_preference",
+          "expected_status": "ok",
+          "actual_status": "ok",
+          "passed": true,
+          "rows": 5,
+          "warnings": [
+            "交通便利度仅比较预置的4个车站近似坐标，不覆盖悉尼完整交通网络。",
+            "评论尚未经过模型分析，使用中性分；不能据此判断没有风险。"
+          ]
+        }
+      ]
+    },
+    "sql_boundary": {
+      "passed": 14,
+      "total": 14,
+      "cases": [
+        {
+          "id": "accept_1",
+          "expected": "accept",
+          "passed": true
+        },
+        {
+          "id": "accept_2",
+          "expected": "accept",
+          "passed": true
+        },
+        {
+          "id": "accept_3",
+          "expected": "accept",
+          "passed": true
+        },
+        {
+          "id": "accept_4",
+          "expected": "accept",
+          "passed": true
+        },
+        {
+          "id": "reject_1",
+          "expected": "reject",
+          "passed": true
+        },
+        {
+          "id": "reject_2",
+          "expected": "reject",
+          "passed": true
+        },
+        {
+          "id": "reject_3",
+          "expected": "reject",
+          "passed": true
+        },
+        {
+          "id": "reject_4",
+          "expected": "reject",
+          "passed": true
+        },
+        {
+          "id": "reject_5",
+          "expected": "reject",
+          "passed": true
+        },
+        {
+          "id": "reject_6",
+          "expected": "reject",
+          "passed": true
+        },
+        {
+          "id": "reject_7",
+          "expected": "reject",
+          "passed": true
+        },
+        {
+          "id": "reject_8",
+          "expected": "reject",
+          "passed": true
+        },
+        {
+          "id": "reject_9",
+          "expected": "reject",
+          "passed": true
+        },
+        {
+          "id": "reject_10",
+          "expected": "reject",
+          "passed": true
+        }
+      ]
+    }
+  },
+  "llm": {
+    "configured_now": true,
+    "intent_final_v2": {
+      "case_exact": 0.95,
+      "field_accuracy": 0.9715909090909091,
+      "target_field_count": 352,
+      "n": 100
+    },
+    "text_to_sql_final_v2": {
+      "status_execution_accuracy": 0.96,
+      "output_contract_accuracy": 0.82,
+      "semantic_result_accuracy": 0.78,
+      "n": 50
+    },
+    "review_reference_v1": {
+      "review_count": 55,
+      "review_exact_match": 0.2545454545454545,
+      "sentiment_accuracy_on_matched_aspects": 0.9864864864864865,
+      "evidence_exact_source_validation": 0.8913043478260869,
+      "strict_aspect_sentiment_micro": {
+        "precision": 0.7934782608695652,
+        "recall": 0.5289855072463768,
+        "f1": 0.6347826086956523,
+        "true_positive": 73,
+        "gold": 138,
+        "predicted": 92
+      },
+      "aspect_detection_micro": {
+        "precision": 0.8043478260869565,
+        "recall": 0.5362318840579711,
+        "f1": 0.6434782608695652,
+        "true_positive": 74,
+        "gold": 138,
+        "predicted": 92
+      }
+    },
+    "report_metadata": {
+      "intent_final_v2": {
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "prompt_sha256": "4b1f2f96adc616f4eb5c6cf43751a5160631b2a7cfed6a37455fc6f04e804909",
+        "generated_at": "2026-09-21T12:05:38.225466+00:00",
+        "report": "evaluation/llm_intent_final_v2_report.json"
+      },
+      "text_to_sql_final_v2": {
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "prompt_sha256": "19e04824fc530a1b2af3d87db61f93493f9aa9206a173af854982f1f40aa0645",
+        "generated_at": "2026-09-21T12:07:08.449536+00:00",
+        "report": "evaluation/llm_sql_final_v2_report.json"
+      },
+      "review_reference_v1": {
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "prompt_sha256": "af18e40aae213da813c0d133310ee874635000bd269e159385360c14953ddb7c",
+        "generated_at": "2026-09-21T11:56:22.571368+00:00",
+        "report": "evaluation/llm_review_reference_v1_report.json"
+      }
+    },
+    "note": "Saved frozen-suite results are measured API outputs; this script only consolidates them. Review metrics use Codex-assisted curated reference labels, not human ground truth."
+  }
+}
