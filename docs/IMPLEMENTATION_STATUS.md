@@ -32,13 +32,12 @@ final-v2 共记录 167 次 API 调用、252,667 tokens；按评测日官方 `gpt
 
 可以宣称：使用真实公开数据、具有可追溯的确定性分析层、完成真实 API 冻结评测、代码和演示数据已整理为 GitHub 作品集结构。
 
-不可宣称：实时库存/价格、真实入住率或订单、因果增益、人工金标准评论准确率、生产级稳定性，或“已经公开部署”。当前仓库尚未配置 GitHub remote，也未由本次工作创建线上服务。
+可以宣称代码已发布为公开 GitHub 仓库：`https://github.com/luluyang586/staylens-lite`。不可宣称：实时库存/价格、真实入住率或订单、因果增益、人工金标准评论准确率、生产级稳定性，或“应用已经在线部署”。本次发布只完成代码托管，尚未创建 Streamlit 线上服务。
 
 ## 发布前剩余外部步骤
 
-1. 在 GitHub 创建仓库并推送；推送前再次确认 `.env`、全量数据库和原始数据均未被追踪。
-2. 在 Streamlit Community Cloud 选择 `app.py` 部署；LLM 密钥只放平台 Secrets。
-3. 在安装 Docker 的机器上实际构建镜像并记录结果。本机没有 Docker，因此 Dockerfile 只能标记为“已提供、未实机验证”。
+1. 在 Streamlit Community Cloud 选择 `app.py` 部署；LLM 密钥只放平台 Secrets。
+2. 在安装 Docker 的机器上实际构建镜像并记录结果。本机没有 Docker，因此 Dockerfile 只能标记为“已提供、未实机验证”。
 
 ## 后续质量提升（不阻塞作品集发布）
 
