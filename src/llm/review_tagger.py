@@ -75,7 +75,7 @@ def tag_reviews(reviews,use_llm=False,cache_path=None):
             batch=pending[offset:offset+10]
             # Never truncate comments silently: bounded batches retain original source.
             if sum(len(str(x["comments"])) for x in batch)>60000:
-                warnings.append("Skipped oversized review batch");continue
+                warnings.append("部分评论篇幅过长，未纳入本次分析。");continue
             try:
                 payload=complete_json(prompt,json.dumps({"reviews":batch},ensure_ascii=False),max_tokens=6000,
                                       json_schema=REVIEW_RESPONSE_SCHEMA,schema_name="staylens_review_tags")
@@ -87,9 +87,9 @@ def tag_reviews(reviews,use_llm=False,cache_path=None):
                      [key(r),item.model_dump_json(),item.review_id,model,prompt_hash,datetime.now(timezone.utc).isoformat()])
                 cache.commit();found.extend(items)
             except Exception:
-                warnings.append("A review batch failed API/output validation; its score remains unknown.")
+                warnings.append("部分评论暂时无法分析，相关结果按信息不足处理。")
     cache.close()
     if not found:return [],"unavailable",["评论尚未经过模型分析，使用中性分；不能据此判断没有风险。"]+warnings
     mode="validated_cache_or_live" if len(found)==len(reviews) else "partial"
-    if mode=="partial":warnings.append(f"Only {len(found)}/{len(reviews)} reviews classified; incomplete evidence.")
+    if mode=="partial":warnings.append(f"评论分析覆盖不完整（已分析 {len(found)}/{len(reviews)} 条），结果仅供参考。")
     return found,mode,warnings

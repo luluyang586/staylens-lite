@@ -17,7 +17,8 @@ def test_database_is_declared_real():
     assert metadata()["data_kind"] in {"real_public_snapshot", "real_public_sample"}
 
 
-def test_real_exploration_enforces_budget_and_capacity():
+def test_real_exploration_enforces_budget_and_capacity(monkeypatch,tmp_path):
+    monkeypatch.setattr("src.llm.review_tagger.CACHE",tmp_path/"review_cache.sqlite")
     result=run_recommendation(intent_override=base(),persist=False)
     assert result.status == "ok"
     assert not result.recommendations.empty

@@ -7,7 +7,7 @@ Build a portfolio-grade Sydney accommodation decision tool that demonstrates bus
 ## 2. Users and jobs
 
 1. A traveller supplies guests, nights, budget, room type, areas, target POIs and qualitative preferences. The system returns five traceable candidates without silently relaxing hard constraints.
-2. An analyst asks a supply/price/rating question. The system returns a bounded read-only result table and shows the executed SQL.
+2. An analyst asks a supply/price/rating question. The system returns a bounded result chart and table; implementation SQL remains internal rather than cluttering the user interface.
 
 ## 3. Non-goals
 
@@ -87,7 +87,7 @@ The system reports unsupported questions instead of inventing unavailable metric
 
 ## 10. Traceability and UI
 
-Every recommendation writes a JSON trace under `data/runs/` containing run ID, UTC time, source metadata, validated intent, status, parameterized SQL plus parameters, weights, review mode, warnings and returned rows. The UI includes a source/audit tab and CSV exports.
+Every recommendation writes a JSON trace under `data/runs/` containing run ID, UTC time, source metadata, validated intent, status, parameterized SQL plus parameters, weights, review mode, warnings and returned rows. The UI exposes a concise data-guidance tab and CSV exports; raw traces and audit JSON remain available to developers but are not shown to end users.
 
 ## 11. Acceptance criteria
 
